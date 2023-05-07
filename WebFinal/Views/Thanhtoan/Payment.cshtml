@@ -1,0 +1,61 @@
+﻿@model string
+@{
+    ViewBag.Title = "Payment";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Đặt hàng thành công</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 20px;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: #ffffff;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+            .btn:hover {
+                background-color: #27ae60;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Đặt hàng thành công</h1>
+        <p>Cảm ơn @Session["TenDV"].ToString() đã đặt hàng. Đơn hàng của bạn đã được xác nhận và đang được xử lý. Chúng tôi sẽ liên lạc với bạn để xác nhận đơn hàng của bạn trong thời gian sớm nhất.</p>
+        <a href="/" class="btn">Quay lại trang chủ</a>
+    </div>
+</body>
+</html>
+

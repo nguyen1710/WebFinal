@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ShopConnection.tb_Sanpham>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<main class="main-content">
+    <div class="container">
+        <div class="page">
+            <section>
+                <header>
+                    <h2 class="section-title">New Products</h2>
+                    <a href="#" class="all">Show All</a>
+                </header>
+
+                <div class="product-list">
+                    @foreach (var item in Model)
+                    {
+                        <div class="product">
+                            <div class="inner-product">
+                                <div class="figure-image">
+                                    <a href="single.html"><img src="~/Asset/thumb/@item.thumb" alt="Game 1"></a>
+                                </div>
+                                <h3 class="product-title">@item.TenSP</h3>
+                                <small class="price">@item.dongia</small>
+                                <p> Hiệu năng vượt trội - Chip Apple A15 Bionic mạnh mẽ, hỗ trợ mạng 5G tốc độ cao</p>
+                                @using (Html.BeginForm("Addtocart", "Giohang", FormMethod.Post))
+                                {
+                                    <input type="hidden" name="masp" value="@item.MaSP" />
+                                    <input type="hidden" name="tenSP" value="@item.TenSP" />
+                                    <input type="hidden" name="dongia" value="@item.dongia" />
+                                    <input type="hidden" name="thumb" value="@item.thumb" />
+                                    <input type="number" id="quantity" name="sl" min="1" value="1">
+                                    <input type="submit" class="button" value="Add to cart" />
+                                }
+                            </div>
+                        </div> <!-- .product -->
+                    }
+
+                </div>  @*.product-list*@
+
+            </section>
+
+
+        </div>
+    </div> <!-- .container -->
+</main> <!-- .main-content -->

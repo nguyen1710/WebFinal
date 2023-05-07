@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Addtocart";
+}
+
+<h2>Addtocart</h2>
+    <main class="main-content">
+        <div class="container">
+            <div class="page">
+
+                <!--<table class="cart">
+                    <thead>
+                        <tr>
+                            <th class="product-name">Product Name</th>
+                            <th class="product-price">Price</th>
+                            <th class="product-qty">Quantity</th>
+                            <th class="action"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @RenderBody();
+                    <tbody>
+                </table>--> <!-- .cart -->
+
+                <div class="cart-total">
+                    <p><strong>Subtotal:</strong> $650.00</p>
+                    <p><strong>Shipment:</strong> $15.00</p>
+                    <p class="total"><strong>Total</strong><span class="num">$665.00</span></p>
+                    <p>
+                        <a href="#" class="button muted">Continue Shopping</a>
+                        <a href="#" class="button">Finalize and pay</a>
+                    </p>
+                </div> <!-- .cart-total -->
+
+            </div>
+        </div> <!-- .container -->
+    </main> <!-- .main-content -->
+
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/app.js"></script>
