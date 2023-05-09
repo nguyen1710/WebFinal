@@ -1,6 +1,5 @@
 # WebFinal
 
-Name the database FINALPROJECTSE change the connectionString in the Program.cs . file (variable strConn)
 
 in Web.config file change connect string by your connect string:
 Example:
